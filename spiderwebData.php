@@ -86,6 +86,16 @@ function deleteElement(&$data, $elementName)
     }
 }
 
+function deleteAllElements(&$data)
+{
+    
+    $count = 0;
+    foreach ($data as $element) {        
+            unset($data[$count]);        
+        $count++;
+    }
+}
+
 function isElementExisting($dimensions, $givenElementName)
 {
     foreach ($dimensions as $dimension => $subdimensions) {
@@ -100,9 +110,19 @@ function isElementExisting($dimensions, $givenElementName)
     return false;
 }
 
-if ($_REQUEST['element'] == null) {
+if ($_REQUEST['element'] == null) {    
     echo json_encode(getSpiderWebData($dimensions));
-} else {
+} elseif ($_REQUEST['element'] == "ResetPage") {   
+    $csvFile = 'selectedData.csv';
+    $csv = getCsv();
+    deleteAllElements($csv);
+    $keys = array_keys($csv[0]);
+    $csv = array_merge(array($keys), $csv);
+    $fp = fopen($csvFile, 'w');
+    fwritecsv2($fp, $csv, ",");
+    fclose($fp);
+}
+else {    
     $csvFile = 'selectedData.csv';
     $csv = getCsv();
     $element = $_REQUEST['element'];

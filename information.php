@@ -21,6 +21,13 @@ Attackers are intelligent and creative, equipped with new technologies and purpo
 
 <h2>Who is using the DevSecOps Maturity Model (DSOMM)</h2>
 One of the biggest insurances in europe based his own maturity model on DSOMM. An other big german insurance is using the "Test and Verification" part to enhance the security in that area. There are other anonymous companies using the DevSecOps Maturity Model.
+<?php
+/*
+This is a multiple-lines comment block
+that spans over multiple
+lines
+
+
 
 <h2>Slides and talks</h2>
 <ul>
@@ -38,3 +45,5 @@ One of the biggest insurances in europe based his own maturity model on DSOMM. A
     <li>The sub-dimension <i>Process</i> has been added after a discussion with <a href="https://www.linkedin.com/in/francoisraynaud/">Francois Raynaud</a> at <a href="https://opensecsummit.org">OpenSecuritySummit 2018</a> that reactive activities are missing.</li>
     <li>Enhancement of my basic translation is performed by <a href="https://github.com/clazba">Claud Camerino</a></li>
 </ul>
+*/
+?>
