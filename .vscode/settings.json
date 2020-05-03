@@ -1,4 +1,4 @@
 {
     "php.validate.enable": false,
-    //"php.executablePath": ""
+    "php.executablePath": ""    
 }
