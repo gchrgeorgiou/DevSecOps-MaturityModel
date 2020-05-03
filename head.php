@@ -75,7 +75,7 @@ function getTableHeader() {
 	return $headerContent . "</tr></thead>";
 }
 function getInfos($dimensions) {
-	$text = "Activity Count: " . getElementCount ( $dimensions );
+	$text = "Activity Count: <b>" . getElementCount ( $dimensions ) . "</b>";
 	return $text;
 }
 function getElementCount($dimensions) {
@@ -83,7 +83,7 @@ function getElementCount($dimensions) {
 	foreach ( $dimensions as $dimension => $subdimensions ) {
 		foreach ( $subdimensions as $subdimension => $element ) {
 			$count = $count + count ( $element );
-			echo "$subdimension: " . count ( $element ) . "<br>";
+			echo "$subdimension: <b>" . count ( $element ) . "</b><br>";
 		}
 	}
 	return $count;
@@ -121,7 +121,7 @@ function getTable($dimensions) {
 			$tableContent .= "</tr>";
 		}
 	}
-	$table = '<table class="table table-striped"><caption>OWASP DevSecOps Maturity Model</caption>';
+	$table = '<table class="table table-striped"><caption><b>OWASP DevSecOps Maturity Model</b></caption>';
 	$table .= $tableContent;
 	$table .= "</table>";
 	return $table;

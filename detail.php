@@ -98,4 +98,10 @@ function printDetail($dimension, $subdimension, $elementName, $dimensions, $repo
 
 printDetail($dimension, $subdimension, $elementName, $dimensions);
 ?>
+ <hr />
+        <footer>
+            <p>&copy; <?php echo date("Y"); ?> - GG DevSecOps Maturity Model</p>
+        </footer>
 </div>
+</body>
+</html>

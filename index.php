@@ -1,5 +1,5 @@
 <?php
-$title = gettext("Activities Overview");
+$title = gettext("DevSecOps Maturity Scorecard");
 include_once "head.php";
 ?>
 <body>
@@ -33,9 +33,14 @@ include_once "navi.php";
 </div>
 
 <?php
-echo "<h1>Matrix</h1>";
+echo "<br/><br/>";
+//echo "<h1>Matrix</h1>";
 echo getTable($dimensions);
 ?>
+<hr />
+        <footer>
+            <p>&copy; <?php echo date("Y"); ?> - GG DevSecOps Maturity Model</p>
+        </footer>
 </div>
 <script>
     $(function () {
@@ -44,3 +49,4 @@ echo getTable($dimensions);
         });
     })</script>
 </body>
+</html>

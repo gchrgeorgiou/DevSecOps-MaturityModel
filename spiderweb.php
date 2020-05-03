@@ -9,26 +9,31 @@ include_once "data.php";
 include_once "navi.php";
 ?>
 <div class="container body-content">
-<div class="jumbotron">
-<?php
-echo "<h2>$title</h2>"
-?>
-</div>
+    <div class="jumbotron">
+    <?php
+    echo "<h2>$title</h2>"
+    ?>
+    </div>
 
 
 
 <a class="btn btn-primary" href="#Chart">See Chart</a>
 <button id="resetPage" class="btn btn-default">Reset Selection</button>
 <hr/>
-<div class="spiderweb">    
-    <?php
-    echo getTable($dimensions);
-    ?>
-    <hr>    
-    <a name="Chart">
-    <div class="chart" id="energychart"></div>
-    </a>
-</div>
+    <div class="spiderweb">    
+        <?php
+        echo getTable($dimensions);
+        ?>
+        <hr>    
+        <a name="Chart">
+        <div class="chart" id="energychart"></div>
+        </a>
+    </div>
+    <a class="btn btn-primary" href="#top">Back to Top</a>
+    <hr />
+        <footer>
+            <p>&copy; <?php echo date("Y"); ?> - GG DevSecOps Maturity Model</p>
+        </footer>
 </div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="js/circularHeatChart.js"></script>
@@ -63,6 +68,5 @@ echo "<h2>$title</h2>"
     });
 
 </script>
-<a class="btn btn-primary" href="#top">Back to Top</a>
 </body>
 </html>
