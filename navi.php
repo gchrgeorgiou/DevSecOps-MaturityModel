@@ -1,3 +1,6 @@
+<div class="navbar navbar-fixed-top">
+        <div class="container">
+
 <?php
 
 $nav = array(
@@ -7,10 +10,10 @@ $nav = array(
     //"graph.php" => "Dependencies",
     //"report.php" => "Full Report",
     //"usefulnessHardness.php" => "Heatmap",
-    "information.php" => "Information"
+    //"information.php" => "Information"
 );
 
-echo "<ul class=\"nav nav-tabs\">";
+echo "<ul style=\"background-color: white;\" class=\"nav nav-tabs\">";
 foreach ($nav as $item => $value) {
     echo "<li ";
     if(strpos($_SERVER['PHP_SELF'], $item)) {
@@ -20,3 +23,5 @@ foreach ($nav as $item => $value) {
 }
 echo "</ul>";
 ?>
+</div>
+</div>

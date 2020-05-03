@@ -38,8 +38,12 @@ function printDetail($dimension, $subdimension, $elementName, $dimensions, $repo
     } else {
         $pageH1 .= "$elementName";
     }
-
+    ?>
+    <div class="container body-content">
+    <div class="jumbotron"><h2>Item Detail</h2></div>
+    <?php        
     echo "<h$headerWeight>$pageH1</h$headerWeight>";
+
     echo build_table_tooltip($element, $headerWeight + 1);
     echo "<hr/>";
 
@@ -93,3 +97,5 @@ function printDetail($dimension, $subdimension, $elementName, $dimensions, $repo
 }
 
 printDetail($dimension, $subdimension, $elementName, $dimensions);
+?>
+</div>
